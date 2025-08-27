@@ -1,6 +1,6 @@
 {
   "name": "@wrygiel/log4js-loggly-appender",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Loggly Appender for log4js-node",
   "homepage": "https://github.com/wrygiel/log4js-loggly-appender",
   "files": [
@@ -31,6 +31,9 @@
     "pnpm": ">= 8.0.0",
     "yarn": "please-use-pnpm"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "update-major": "npx npm-check-updates -u && pnpm install",
     "update-minor": "npx npm-check-updates --target minor -u && pnpm install"
@@ -40,8 +43,8 @@
     "lib": "lib"
   },
   "dependencies": {
-    "debug": "^3.2.7",
-    "node-loggly-bulk": "^2.2.5"
+    "debug": "^4.4.1",
+    "node-loggly-bulk": "^4.0.2"
   },
   "devDependencies": {
     "@log4js-node/sandboxed-module": "^2.2.1",
