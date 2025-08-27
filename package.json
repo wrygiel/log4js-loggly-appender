@@ -1,8 +1,8 @@
 {
-  "name": "@log4js-node/loggly",
+  "name": "@wrygiel/log4js-loggly-appender",
   "version": "1.0.0",
   "description": "Loggly Appender for log4js-node",
-  "homepage": "https://log4js-node.github.io/log4js-node/",
+  "homepage": "https://github.com/wrygiel/log4js-loggly-appender",
   "files": [
     "lib",
     "types"
@@ -25,37 +25,27 @@
   "bugs": {
     "url": "http://github.com/log4js-node/loggly/issues"
   },
+  "packageManager": "pnpm@10.15.0",
   "engines": {
-    "node": ">=4.0"
+    "npm": "please-use-pnpm",
+    "pnpm": ">= 8.0.0",
+    "yarn": "please-use-pnpm"
   },
   "scripts": {
-    "prepush": "npm test",
-    "commitmsg": "validate-commit-msg",
-    "pretest": "eslint 'lib/**/*.js' 'test/**/*.js'",
-    "test": "tap 'test/tap/**/*.js' --100",
-    "codecov": "tap 'test/tap/**/*.js' --cov --coverage-report=lcov && codecov"
+    "update-major": "npx npm-check-updates -u && pnpm install",
+    "update-minor": "npx npm-check-updates --target minor -u && pnpm install"
   },
   "directories": {
     "test": "test",
     "lib": "lib"
   },
   "dependencies": {
-    "debug": "^3.1.0",
-    "node-loggly-bulk": "^2.2.1"
+    "debug": "^3.2.7",
+    "node-loggly-bulk": "^2.2.5"
   },
   "devDependencies": {
-    "@log4js-node/sandboxed-module": "^2.1.1",
-    "codecov": "^3.0.0",
-    "conventional-changelog": "^1.1.15",
-    "eslint": "^4.10.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-import-resolver-node": "^0.3.1",
-    "eslint-plugin-import": "^2.8.0",
-    "husky": "^0.14.3",
-    "log4js": "^6.4.0",
-    "nyc": "^15.1.0",
-    "tap": "^16.3.0",
-    "validate-commit-msg": "^2.14.0"
+    "@log4js-node/sandboxed-module": "^2.2.1",
+    "log4js": "^6.9.1"
   },
   "browser": {
     "os": false
@@ -80,14 +70,5 @@
       "subjectPatternErrorMsg": "subject does not match subject pattern!",
       "helpMessage": "\n# allowed type: feat, fix, docs, style, refactor, example, perf, test, chore, revert\n# subject no more than 50 chars\n# a body line no more than 72 chars"
     }
-  },
-  "nyc": {
-    "all": true,
-    "include": [
-      "lib/**/*.js"
-    ],
-    "require": [
-      "./test/sandbox-coverage"
-    ]
   }
 }
