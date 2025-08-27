@@ -1,4 +1,13 @@
-**This is a fork of [log4js-node/loggly](https://github.com/log4js-node/loggly) with updated deps. Published in `@wrygiel/log4js-loggly-appender` package.**
+# About this fork
+
+This is a fork of [log4js-node/loggly](https://github.com/log4js-node/loggly)
+with updated deps. I did not touch it otherwise, and are not planning to support
+it (especially if I resign from using Loggly in the future).
+
+Published via the `@wrygiel/log4js-loggly-appender` package. If you want to use
+it, simply replace all occurrences of `@log4js-node/loggly` with
+`@wrygiel/log4js-loggly-appender` in your `package.json` and log4js appender
+keys.
 
 ---
 
