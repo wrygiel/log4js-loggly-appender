@@ -13,6 +13,8 @@ keys.
 
 **ORIGINAL CONTENTS OF THE FORKED REPO'S README**
 
+---
+
 # Loggly Appender for Log4JS
 
 Sends logging events to [Loggly](https://www.loggly.com), optionally adding tags. This appender uses [node-loggly-bulk](https://www.npmjs.com/package/node-loggly-bulk). Consult the docs for node-loggly-bulk, or loggly itself, if you want more information on the configuration options below.
