@@ -21,7 +21,9 @@ Sends logging events to [Loggly](https://www.loggly.com), optionally adding tags
 
 ## Installation
 
-`npm install @log4js-node/loggly`
+~~`npm install @log4js-node/loggly`~~
+
+`npm install @wrygiel/log4js-loggly-appender`
 
 (This is a plug-in appender for [log4js](https://log4js-node.github.io/log4js-node/), so you'll need that as well)
 
@@ -45,7 +47,7 @@ shape `{ tags: [] }` so that it's possible to add additional tags in a normal lo
 log4js.configure({
   appenders: {
     loggly: {
-      type: '@log4js-node/loggly',
+      type: '@wrygiel/log4js-loggly-appender', // was @log4js-node/loggly
       token: 'somethinglong',
       subdomain: 'your.subdomain',
       tags: [ 'tag1' ]
